@@ -158,6 +158,7 @@ button {
     border: 1px transparent;
     border-radius: 20px;
     color: #fff;
+    cursor: pointer;
     font-size: 14px;
     padding: 12px 22px;
     text-transform: uppercase;
@@ -166,10 +167,53 @@ button:hover {
     background: #407fc0;
 }
 button:disabled {
-    background: rbba(94, 151, 209, .3);
+    background: rgba(94, 151, 209, .3);
 }
 
+/* ====
+Cart Status text link
+=== */
+.header {
+    flex-wrap: nowrap;
 
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-orient: horizontal; 
+       -moz-box-orient: horizontal;
+            box-orient: horizontal;
+    flex-direction: row;
+}
+.cart-head,
+.cart-status {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.cart-head {
+    width: 80%;
+}
+.cart-status {
+    width: 20%;
+}
+.cart-link {
+    cursor: pointer;
+    font-size: 0.875rem; /* 14px */
+    text-align: right;
+    display: block;
+}
+.cart-link:before {
+    content: '';
+    background: url(../images/icon-cart.png) left center no-repeat;
+    display: inline-flex;
+    padding-bottom: 3px;
+    padding-right: 8px;
+    height: 14px;
+    width: 17px;
+}
 
 
 /* ==================================================================================

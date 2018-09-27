@@ -4,7 +4,12 @@ import CartContainer from './CartContainer'
 
 const App = () => (
   <div>
-    <h2>Acme Store</h2>
+    <div className="header">
+      <div className="cart-head"><h2>Acme Store</h2></div>
+      <div className="cart-status">
+        <span className="cart-link">Your cart is empty</span>
+      </div>
+    </div>
     <hr/>
     <ProductsContainer />
     <hr/>
