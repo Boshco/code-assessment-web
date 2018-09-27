@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Redux Shopping Cart Example</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
   </head>
   <body>
     <div id="root"></div>
@@ -17,5 +19,18 @@
       To begin the development, run `npm start` in this folder.
       To create a production bundle, use `npm run build`.
     -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+
+        $(window).on('load', function() {
+          $("button.btn-add-item").each(function(){
+            $(this).appendTo( $(this).prevAll('.product-group').find('.product-details') );
+          });
+        });
+
+      });
+    </script>
   </body>
 </html>
