@@ -194,10 +194,10 @@ Cart Status text link
     flex-direction: column;
 }
 .cart-head {
-    width: 80%;
+    width: 60%;
 }
 .cart-status {
-    width: 20%;
+    width: 40%;
 }
 .cart-link {
     cursor: pointer;
@@ -220,7 +220,8 @@ Cart Status text link
 Media Query Breakpoints
 ================================================================================== */
 /* ----------- Tablet styles ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px),
+only screen and (min-width: 640px) and (max-width: 1280px) {
 
     #root > div {
         padding: 43px 50px;
@@ -249,10 +250,12 @@ Media Query Breakpoints
     }
     
 }
+/* ----------- /Tablet styles ----------- */
 
 
 /* ----------- Mobile styles ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px),
+screen and (min-width: 320px) and  (max-width: 640px) {
 
     #root > div {
         padding: 40px 0 0 0;
@@ -297,8 +300,24 @@ Media Query Breakpoints
             -ms-transform: translateY(-70%);
                 transform: translateY(-70%);
     }
-    
+
+    .header {
+        flex-wrap: wrap;
+        -webkit-box-orient: vertical; 
+            -moz-box-orient: vertical;
+                box-orient: vertical;
+        flex-direction: column;
+    }
+    .cart-head,
+    .cart-status {
+        width: 100%%;
+    }
+    .cart-link {
+        text-align: left;
+    }
+
 }
+/* ----------- /Mobile styles ----------- */
 
 
 
