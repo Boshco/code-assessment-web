@@ -15,12 +15,16 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
       />
     )
   ) : (
-    <em>Please add some products to cart.</em>
+    <div className="cart-msg">
+      <div className="cart-msg-img"></div>
+      <p>Please add some products to your cart.</p>
+    </div>
   )
 
   return (
-    <div>
-      <h3>Your Cart</h3>
+    <div className="cart-container">
+      <h3 className="cart-container-head">Your Cart</h3>
+      <hr/>
       <div>{nodes}</div>
       <p>Total: &#36;{total}</p>
       <button onClick={onCheckoutClicked}

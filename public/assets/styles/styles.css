@@ -91,8 +91,8 @@ Products
 
 .product-info {
     -webkit-box-flex: 2;
-    -moz-box-flex: 2;
-    box-flex: 2;
+       -moz-box-flex: 2;
+            box-flex: 2;
     -webkit-flex: 2 1 auto;
     flex: 2 1 auto;
 
@@ -122,10 +122,10 @@ Products
 .product-details,
 .product-price {
     -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    box-flex: 1;
+       -moz-box-flex: 1;
+            box-flex: 1;
     -webkit-flex: 1 1 auto;
-    flex: 1 1 auto;
+            flex: 1 1 auto;
 }
 .product-details {
     position: relative;
@@ -213,6 +213,54 @@ Cart Status text link
     padding-right: 8px;
     height: 14px;
     width: 17px;
+}
+
+
+/* ====
+Cart Modal
+=== */
+div[class^='styles_overlay__'] {
+    background: rgba(0, 0, 0, 0.40);
+}
+div[class^='styles_modal_'] {
+    background: #fff;
+    border-radius: 10px;
+    color: #919191;
+    max-width: 780px;
+    width: 100%;
+}
+
+.cart-container > hr {
+    color: #e8e8e8;
+}
+h3.cart-container-head {
+    color: #000;
+    font-size: 2.375rem; /* 38px */
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+div[class^='styles_modal_'] > button:hover {
+    background: transparent !important;
+}
+div[class^='styles_modal_'] > button > svg > path {
+    fill: #cbcbcb;
+}
+div[class^='styles_modal_'] > button > svg > path:hover {
+    fill: #000000;
+}
+
+.cart-msg {
+    color: #919191;
+    font-size: 1.3125rem; /* 21px */
+    font-style: normal;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.cart-msg-img {
+    background: url(../images/cart_image.png) center center no-repeat;
+    height: 76px;
+    margin: 0 auto;
+    width: 95px; 
 }
 
 
@@ -310,7 +358,7 @@ screen and (min-width: 320px) and  (max-width: 640px) {
     }
     .cart-head,
     .cart-status {
-        width: 100%%;
+        width: 100%;
     }
     .cart-link {
         text-align: left;
