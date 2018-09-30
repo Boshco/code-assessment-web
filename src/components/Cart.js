@@ -26,11 +26,13 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
       <h3 className="cart-container-head">Your Cart</h3>
       <hr/>
       <div>{nodes}</div>
-      <p>Total: &#36;{total}</p>
-      <button onClick={onCheckoutClicked}
-        disabled={hasProducts ? '' : 'disabled'}>
-        Checkout
-      </button>
+      <div className="checkout-total">
+        <p>Total: &#36;{total}</p>
+        <button onClick={onCheckoutClicked}
+          disabled={hasProducts ? '' : 'disabled'}>
+          Checkout
+        </button>
+      </div>
     </div>
   )
 }
