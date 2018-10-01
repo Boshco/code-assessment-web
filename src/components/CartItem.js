@@ -10,6 +10,9 @@ const CartItem = ({ product, onIncreaseQuantity, onDecreaseQuantity }) => (
       price={product.price}
       quantity={product.quantity}
       inventory={product.inventory} />
+      <div className="remove-link" onClick={onDecreaseQuantity}>
+        {product.quantity > 0 ? 'Remove' : 'Use Remove'}
+      </div>
       <div className="button-container">
         <button className="button-quantity button-decrement"
         onClick={onDecreaseQuantity}
